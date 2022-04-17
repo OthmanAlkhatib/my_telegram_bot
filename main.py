@@ -70,7 +70,7 @@ def enter_time_handler(update: Update, context: CallbackContext):
     # Storing Whole Data
     message_data = data_source.create_reminder(update.message.chat_id, message_text, time)
     # update.message.reply_text("Your Reminder: " + message_data.__repr__())
-    update.message.reply_text(datetime.datetime.now)
+    update.message.reply_text(datetime.datetime.now())
     update.message.reply_text(time)
     return ConversationHandler.END
 
