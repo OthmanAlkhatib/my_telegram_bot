@@ -1,1 +1,1 @@
-web: python Ahsan_Alhadeeth_Bot/main.py
+web: python main.py
