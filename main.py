@@ -12,15 +12,15 @@ import sys
 ADD_REMINDER_TEXT = "Add Remainder ⏰"
 TIME_SLEEP = 20
 
-TOKEN = "5328781640:AAFOmH1jv53Xehl_oOMBK4LleHxYqTzBUPE"
-DATABASE_URL = "postgres://othman_user:congratulation@localhost:5432/ahsan_alhadeeth_telegram"
-MODE = "dev"
-# TOKEN = os.getenv("TOKEN")
+# TOKEN = "5328781640:AAFOmH1jv53Xehl_oOMBK4LleHxYqTzBUPE"
+TOKEN = os.getenv("TOKEN")
+# DATABASE_URL = "postgres://othman_user:congratulation@localhost:5432/ahsan_alhadeeth_telegram"
+DATABASE_URL = os.environ.get("DATABASE_URL")
 ENTER_MESSAGE, ENTER_TIME = range(2)
-# DATABASE_URL = os.environ.get("DATABASE_URL")
+
 data_source = DataSource(DATABASE_URL)
 
-# MODE = os.getenv("MODE")
+MODE = os.getenv("MODE")
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 logger = logging.getLogger()
 
