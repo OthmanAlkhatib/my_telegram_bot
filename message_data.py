@@ -3,8 +3,9 @@ import datetime
 
 class ReminderData:
 
-    def __init__(self, row):
-        self.reminder_id, self.chat_id, self.message, self.time, self.fired = row
+    def __init__(self, row, time):
+        self.reminder_id, self.chat_id, self.message, _, self.fired = row
+        self.time = time
 
     def __repr__(self):
         return "Message: {0}; At Time: {1}".format(self.message, self.time.strftime('%d/%m/%Y %H:%M'))

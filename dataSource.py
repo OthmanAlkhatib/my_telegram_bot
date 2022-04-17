@@ -84,7 +84,7 @@ class DataSource:
             row = cur.fetchone()   # To Catch The One That I Created
             cur.close()
             conn.commit()
-            return ReminderData(row)
+            return ReminderData(row, time)
 
         except (Exception, psycopg2.DatabaseError) as error:
             logger.error(error)
