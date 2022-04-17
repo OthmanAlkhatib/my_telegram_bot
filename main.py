@@ -10,7 +10,7 @@ import sys
 
 
 ADD_REMINDER_TEXT = "Add Remainder ⏰"
-TIME_SLEEP = 20
+TIME_SLEEP = 3
 
 # TOKEN = "5328781640:AAFOmH1jv53Xehl_oOMBK4LleHxYqTzBUPE"
 TOKEN = os.getenv("TOKEN")
@@ -33,7 +33,6 @@ elif MODE == "prod":
         logger.info("Start in PROD mode")
         updater.start_webhook(listen="0.0.0.0", port=int(os.environ.get("PORT", 5000)), url_path=TOKEN,
                               webhook_url="https://{}.herokuapp.com/{}".format("my-telegram-bottt", TOKEN))
-        # updater.bot.setWebhook('https://my-telegram-bottt.herokuapp.com/' + TOKEN)
 else:
     logger.error("No mode specified")
     sys.exit(1)
