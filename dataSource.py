@@ -64,7 +64,7 @@ class DataSource:
             cur = conn.cursor()
             cur.execute(SELECT_ALL_REMINDERS_STATEMENT)   # cur return The Value of Executed Command
             for row in cur.fetchall():   # I Need Every Row in The List of Table's Rows
-                reminders.append(ReminderData(row))   # To Reminder Data in Class
+                reminders.append(ReminderData(row, -1))   # To Reminder Data in Class
             cur.close()
 
         except (Exception, psycopg2.DatabaseError) as error:
