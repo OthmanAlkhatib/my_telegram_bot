@@ -1,12 +1,15 @@
+after downloading postgres we should add PATH as system environment variable with value c:/program files/postgresql/11/bin
+
+cd c:/program files/postgresql/11/bin
+psql -U postgres
+
 create database ahsan_alhadeeth_telegram;
 create user othman_user with encrypted password 'congratulation';
 grant all privileges on database ahsan_alhadeeth_telegram to othman_user;
 
-cd c:/program files/postgresql/11/bin
-psql -U postgres
-\c Database_Name : to Open my Database
-\dt : to Show Available Tables
-SELECT * FROM Table_Name; -> to View Table Content
+\c Database_Name  -> to Open my Database
+\dt  -> to Show Available Tables
+SELECT * FROM Table_Name;  -> to View Table Content
 
 
 -- Database_URL : postgres://othman_user:congratulation@localhost:5432/ahsan_alhadeeth_telegram
