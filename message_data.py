@@ -11,4 +11,4 @@ class ReminderData:
         return "Message: {0}; At Time: {1}".format(self.message, self.time.strftime('%d/%m/%Y %H:%M'))
 
     def should_be_fired(self):
-        return self.fired is False and datetime.datetime.today() - timedelta(hours=3) >= self.time
+        return self.fired is False and datetime.datetime.today() + timedelta(hours=3) >= self.time
